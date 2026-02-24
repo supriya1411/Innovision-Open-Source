@@ -15,7 +15,7 @@ export async function POST(request) {
       return NextResponse.json({ error: "Prompt is required" }, { status: 400 });
     }
 
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     const fullPrompt = `You are an expert AI web developer. Generate a complete, modern, single-file HTML website based on this request: "${prompt}".
 

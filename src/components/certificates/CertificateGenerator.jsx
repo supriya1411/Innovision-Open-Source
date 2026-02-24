@@ -66,7 +66,7 @@ const CertificateGenerator = ({ certificateData }) => {
     // User name (highlighted)
     ctx.font = "bold 42px Georgia";
     ctx.fillStyle = "#ffd700";
-    ctx.fillText(userName || "Student", canvas.width / 2, 360);
+    ctx.fillText(userName, canvas.width / 2, 360);
 
     // "has successfully completed"
     ctx.fillStyle = "#ffffff";
@@ -77,8 +77,8 @@ const CertificateGenerator = ({ certificateData }) => {
     ctx.font = "bold 32px Georgia";
     ctx.fillStyle = "#ffd700";
     const maxWidth = 900;
-    const safeTitle = courseTitle || "Course Completion";
-    const words = safeTitle.split(" ");
+    const words = courseTitle.split(" ");
+    let line = "";
     let y = 470;
 
     for (let i = 0; i < words.length; i++) {

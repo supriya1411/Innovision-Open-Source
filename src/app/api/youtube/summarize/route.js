@@ -38,7 +38,7 @@ export async function POST(request) {
       return NextResponse.json({ error: "AI service not configured" }, { status: 500 });
     }
 
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
     const prompt = `Analyze this YouTube video transcript and create a chapter-wise summary.
 
 Video Title: ${title}

@@ -14,7 +14,7 @@ export async function POST(request) {
 
     const { courseId, courseTitle, courseDescription, chapters, difficulty, topics } = await request.json();
 
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     const prompt = `Create a comprehensive learning roadmap for this course.
 

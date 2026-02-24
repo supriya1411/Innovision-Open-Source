@@ -71,7 +71,7 @@ export async function POST(request) {
       }
     }
 
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
     const prompt = `Create a comprehensive learning course from this YouTube video.
 
 Video Title: ${title}

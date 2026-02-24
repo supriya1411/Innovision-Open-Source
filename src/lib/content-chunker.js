@@ -10,7 +10,7 @@ export async function chunkContentWithAI(text, fileName) {
     const truncatedText =
         text.length > MAX_INPUT_CHARS ? text.slice(0, MAX_INPUT_CHARS) : text;
 
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     const prompt = `You are a world-class curriculum designer and educational content architect. 
 Your goal is to transform raw, extracted text into a "Premium Digital Learning Experience". 
@@ -129,7 +129,7 @@ function fallbackChunking(text, fileName) {
 
 
 export async function generateCourseTitle(fileName, textPreview) {
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     const cleanName = fileName.replace(/\.[^/.]+$/, "").replace(/[_-]/g, " ");
     const preview = textPreview.slice(0, 1000);
@@ -151,7 +151,7 @@ Return ONLY the title text, nothing else.`;
 }
 
 export async function generateCourseDescription(textPreview) {
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     const preview = textPreview.slice(0, 2000);
 
